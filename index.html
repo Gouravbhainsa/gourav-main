@@ -123,10 +123,13 @@
         }
 
         @keyframes pulseDot {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1);
                 opacity: 1;
             }
+
             50% {
                 transform: scale(1.4);
                 opacity: 0.6;
@@ -245,11 +248,15 @@
 <body
     class="bg-slate-50 font-body-md text-body-md text-slate-800 antialiased selection:bg-cyan-100 selection:text-cyan-900 bg-dot-pattern">
     <!-- Top Scroll Progress Indicator Bar -->
+
+
     <div id="scroll-progress-bar" style="width: 0%;"></div>
 
     <main class="w-full">
         <div class="flex flex-col w-full">
-            <!-- Top Atmospheric Soft Glow -->
+            <!-- Top Atmospheric Soft Glows -->
+
+
             <div class="relative w-full overflow-hidden">
                 <div
                     class="absolute -top-32 left-1/2 -translate-x-1/2 w-[760px] h-[360px] bg-gradient-to-b from-cyan-200/40 via-teal-100/30 to-transparent blur-3xl pointer-events-none -z-10">
@@ -1498,7 +1505,7 @@
                 }
 
                 // Top Scroll Progress Bar Update
-                window.addEventListener('scroll', function() {
+                window.addEventListener('scroll', function () {
                     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
                     const scrolled = (winScroll / height) * 100;
@@ -1510,7 +1517,7 @@
 
                 // Smooth Scroll for Anchor Links
                 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function(e) {
+                    anchor.addEventListener('click', function (e) {
                         const targetId = this.getAttribute('href');
                         if (targetId && targetId !== '#') {
                             const targetElement = document.querySelector(targetId);
